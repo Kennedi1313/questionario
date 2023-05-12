@@ -209,7 +209,7 @@ export default function Home() {
           </div>
 
           <div className='flex flex-col gap-1'>
-            <label>10. Caso tenha respondido 'Sim' na questão anterior, qual o grau de importância que 
+            <label>10. Caso tenha respondido &apos;Sim&apos; na questão anterior, qual o grau de importância que 
               você considera a Arquitetura da Informação no sentido de melhorar a experiência de 
               uso e interação para seu Repositório? </label>
             <label className='flex flex-row gap-2'>
