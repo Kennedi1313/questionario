@@ -94,19 +94,19 @@ export default function Home() {
 
           <div className='flex flex-col gap-1'>
             <label>4. Há quanto tempo você trabalha no setor de Repositórios Digitais? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Menos de 2 anos'} {...register("q4", { required: "Este campo é obrigatório." })} /> 
               Menos de 2 anos
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 2 anos'} {...register("q4", { required: "Este campo é obrigatório." })} /> 
               Mais de 2 anos
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q4", { required: "Este campo é obrigatório." })} /> 
               Mais de 5 anos
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q4", { required: "Este campo é obrigatório." })} /> 
               Mais de 10 anos
             </label>
@@ -122,11 +122,11 @@ export default function Home() {
                     da Informação, programação ou algo relacionado para auxiliar no trabalho com 
                     Repositórios Institucionais? 
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q5", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q5", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -139,11 +139,11 @@ export default function Home() {
 
           <div className='flex flex-col gap-1'>
             <label>6. Você participa de eventos científicos sobre Ciência Aberta e Repositórios Digitais? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q6", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q6", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -157,11 +157,11 @@ export default function Home() {
           <div className='flex flex-col gap-1'>
             <label>7. Você participa do processo de atualização do software DSpace para alimentação 
               do seu Repositório Institucional com materiais científicos?  </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q7", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q7", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -176,11 +176,11 @@ export default function Home() {
             <label>8. Caso participe do processo, você opina sobre como deve ser a disposição das 
               informações no ambiente, isto é, você participa direta ou indiretamente do processo 
               de customização de interface e organização das comunidades? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q8", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q8", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -193,11 +193,11 @@ export default function Home() {
 
           <div className='flex flex-col gap-1'>
             <label>9. Você já ouviu falar em Arquitetura da Informação? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q9", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q9", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -212,20 +212,20 @@ export default function Home() {
             <label>10. Caso tenha respondido &apos;Sim&apos; na questão anterior, qual o grau de importância que 
               você considera a Arquitetura da Informação no sentido de melhorar a experiência de 
               uso e interação para seu Repositório? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q10", { required: "Este campo é obrigatório." })} /> 
               Muito Importante
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q10", { required: "Este campo é obrigatório." })} /> 
               Importante
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q10", { required: "Este campo é obrigatório." })} /> 
               Irrelevante
             </label>
-            <label className='flex flex-row gap-2'>
-              <input type='radio' value={'Mais de 10 anos'} {...register("q10", { required: "Este campo é obrigatório." })} /> 
+            <label className='flex flex-row gap-2 items-center'>
+              <input type='radio' className='w-6 min-w-[16px]' value={'Mais de 10 anos'} {...register("q10", { required: "Este campo é obrigatório." })} /> 
               Não considero que a Arquitetura da Informação possa ser importante na customização 
                 de um Repositório Institucional
             </label>
@@ -239,11 +239,11 @@ export default function Home() {
           <div className='flex flex-col gap-1'>
             <label>11. Sobre a política do Repositório Institucional da sua Universidade, ela está 
               disponível em acesso aberto? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q11", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q11", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -257,11 +257,11 @@ export default function Home() {
           <div className='flex flex-col gap-1'>
             <label>12. A política contempla ou prevê a Arquitetura da Informação para a customização 
               e organização do seu Repositório Institucional? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q12", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q12", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -276,19 +276,19 @@ export default function Home() {
             <label>13. Caso contemple a Arquitetura da Informação, esta é centrada na missão e 
               identidade institucional ou centrada no conteúdo (documentos arquivados) ou 
               centrada no usuário? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q13", { required: "Este campo é obrigatório." })} /> 
               Centrada na missão e identidade institucional
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q13", { required: "Este campo é obrigatório." })} /> 
               Centrada no conteúdo
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q13", { required: "Este campo é obrigatório." })} /> 
               Centrada no usuário
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q13", { required: "Este campo é obrigatório." })} /> 
               Centrada nas três opções acima
             </label>
@@ -304,11 +304,11 @@ export default function Home() {
             <label>14. Você considera que, sendo um ambiente voltado a uma organização educacional, 
               seu Repositório Institucional contempla a missão e objetivos da instituição da qual 
               está vinculado? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q14", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q14", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -335,11 +335,11 @@ export default function Home() {
           
           <div className='flex flex-col gap-1'>
             <label>16. Você considera fácil a navegação no seu Repositório Institucional? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q16", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q16", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -353,11 +353,11 @@ export default function Home() {
           <div className='flex flex-col gap-1'>
             <label>17. Você considera que os materiais científicos arquivados no seu Repositório 
               Institucional são acessados facilmente? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q17", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q17", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -373,11 +373,11 @@ export default function Home() {
             <label>18. Já foi realizado algum estudo de comunidade para coletar opiniões e percepções 
               dos usuários perante as funcionalidades e recuperação da informação no seu 
               Repositório Institucional? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q18", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q18", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -391,11 +391,11 @@ export default function Home() {
           <div className='flex flex-col gap-1'>
             <label>19. Você considera que seus usuários conseguem ser autônomos para pesquisar o 
               material desejado no seu Repositório Institucional? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q19", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q19", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -422,11 +422,11 @@ export default function Home() {
               levasse em consideração a Arquitetura da Informação no contexto institucional, de 
               conteúdo e de usuário, você a utilizaria para auxiliar na customização do seu 
               Repositório? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q21", { required: "Este campo é obrigatório." })} /> 
               Sim
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q21", { required: "Este campo é obrigatório." })} /> 
               Não
             </label>
@@ -443,19 +443,19 @@ export default function Home() {
               uma ferramenta para avaliação de Repositórios Institucionais, tanto a nível de 
               aprendizado para customização quanto para a avaliação da Arquitetura da 
               Informação? </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 5 anos'} {...register("q22", { required: "Este campo é obrigatório." })} /> 
               Muito importante
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q22", { required: "Este campo é obrigatório." })} /> 
               Importante
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q22", { required: "Este campo é obrigatório." })} /> 
               Irrelevante
             </label>
-            <label className='flex flex-row gap-2'>
+            <label className='flex flex-row gap-2 items-center'>
               <input type='radio' value={'Mais de 10 anos'} {...register("q22", { required: "Este campo é obrigatório." })} /> 
               Não considero usual
             </label>
