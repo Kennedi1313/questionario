@@ -9,11 +9,6 @@ import { FaBars, FaTimes, FaXRay, FaXing } from 'react-icons/fa'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Questionario',
-  description: 'Created by github@Kennedi1313',
-}
-
 export default function RootLayout({
   children,
 }: {
