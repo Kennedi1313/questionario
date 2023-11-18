@@ -20,6 +20,13 @@ export default function RootLayout({
     main[0]?.classList.toggle('dark');
     setDarkMode(!darkMode)
   }
+  
+  const [isResultEmpty, setIsResultEmpty] = useState(true);
+  if (typeof window !== 'undefined') {
+    if(localStorage.getItem('pontGeral') != null && isResultEmpty) {
+      setIsResultEmpty(false);
+    }
+  }
 
   function toggleMenu() {
     var menu = document.getElementById('menu');
@@ -65,9 +72,9 @@ export default function RootLayout({
                     CONTATO
                   </span>
                 </Link>
-                <Link href={localStorage.getItem('pontGeral') != null ? '/result' : '#'} 
+                <Link href={ isResultEmpty ? '#' : '/result'} 
                   className={
-                    localStorage.getItem('pontGeral') != null ? 'px-2' : 'px-2 text-gray-300'
+                    isResultEmpty ? 'px-2 text-gray-300' : 'px-2' 
                   } >
                   <span 
                     className={
