@@ -5,10 +5,16 @@ import { useEffect, useRef, useState } from "react";
 import ReactToPrint from "react-to-print";
 
 export default function Result() {
-    const pontGeral = Number(localStorage.getItem('pontGeral'));
-    const pontContexto = Number(localStorage.getItem('pontContexto'));
-    const pontConteudo = Number(localStorage.getItem('pontConteudo'));
-    const pontUsuario = Number(localStorage.getItem('pontUsuario'));
+    var pontGeral = 0;
+    var pontContexto = 0;
+    var pontConteudo = 0;
+    var pontUsuario = 0;
+    if (typeof window !== 'undefined') {
+        pontGeral = Number(localStorage.getItem('pontGeral'));
+        pontContexto = Number(localStorage.getItem('pontContexto'));
+        pontConteudo = Number(localStorage.getItem('pontConteudo'));
+        pontUsuario = Number(localStorage.getItem('pontUsuario'));
+    }
     const pontTotal = pontGeral +
                         pontContexto + 
                         pontConteudo +
