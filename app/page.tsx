@@ -95,23 +95,23 @@ export default function Home() {
         {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
         <div className='flex flex-col mb-10 md:mb-28 bg-white pt-20 md:px-5 p-4'>
           <div className='flex flex-col md:flex-row w-full rounded-md p-2 md:p-8'>
-            <p className='font-semibold text-2xl'>
+            <p className='font-semibold text-2xl leading-[1.875rem]'>
               Seja bem-vindo a “Ferramenta de Avaliação de Repositórios Institucionais”, baseada nos princípios da Arquitetura da Informação (AI).
             </p>
           </div>
           <div className='w-full p-2 md:px-8 md:py-5 gap-2 '>
-            <p className='text-justify'>
+            <p className='text-left'>
               A AI surge em meados da década de 1970 com as pesquisas nos laboratórios da International Business Machines Corporation (IBM) e posteriormente nos laboratórios da Xerox Palo Alto Research Center (PARC) sendo, de início, voltada a organização de recursos computacionais e sua terminologia ainda não era “Arquitetura da Informação”. Richard Saul Wurman, considerado como o criador da Arquitetura da Informação, menciona o termo Information Architecture (Arquitetura da Informação) pela primeira vez no final dos anos 1970. Wurman considera que, devido à explosão de dados, era necessário entregar o produto ‘informação’ como algo compreensível e claro, facilitando a vida das pessoas que utilizam essa informação e, por isso, a necessidade de estruturar/arquitetar melhor a informação.
             </p>
           </div>
           <div className='w-full p-2 md:px-8 md:py-5 gap-2'>
-            <p className='text-justify'>
+            <p className='text-left'>
               Com o surgimento e posterior consolidação da internet nos anos 1990 e da web no final da década de 1990, a AI apresenta-se como alternativa para a compreensão do projeto, desenho, formas de estruturação e customização de ambientes web e além da web, tendo Louis Rosenfeld (historiador, bibliotecário e arquiteto da informação), Peter Morville (bibliotecário e arquiteto da informação) e, posteriormente, Jorge Arango (arquiteto da informação) como autores base que consolidaram esse estudo nos livros Information Architecture for the world wide web (1º, 2º e 3º edições) e Information Architecture for the web and beyond (4º edição).
             </p>
           </div>
           <div className='flex flex-col md:flex-row w-full p-2 md:pb-5 md:pt-5 md:pl-8 gap-2 '>
               
-            <p className='text-justify md:w-1/2'>
+            <p className='text-left md:w-1/2'>
               A AI envolve as dimensões contexto, conteúdo e usuário assim como os tesauros, vocabulários controlados, metadados e os sistemas de organização, rotulagem, navegação e busca. Desse modo, no contexto dos Repositórios Institucionais, os princípios da Arquitetura da Informação contribuem para uma melhor estruturação da informação, dos ícones, da organização da interface, da interrelação com a identidade institucional, da disposição do conteúdo e, principalmente, da melhoria da experiência de uso da comunidade usuária. Para isso, convido você a avaliar seu Repositório Institucional com a ferramenta específica voltada a AI. Ao final, a ferramenta disponibilizará uma nota final da análise realizada, assim como diretrizes gerais para possíveis melhorias para seu Repositório!
             </p>
 

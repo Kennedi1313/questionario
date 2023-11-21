@@ -25,6 +25,8 @@ export default function RootLayout({
   if (typeof window !== 'undefined') {
     if(localStorage.getItem('pontGeral') != null && isResultEmpty) {
       setIsResultEmpty(false);
+    } else if (localStorage.getItem('pontGeral') == null && !isResultEmpty) {
+      setIsResultEmpty(true);
     }
   }
 
@@ -46,13 +48,13 @@ export default function RootLayout({
     <html lang="en" className='min-h-screen'>
       <body className={inter.className}>
         <button id="toggle-button"
-            className="fixed right-0 top-2 w-12 h-14 block md:hidden z-[100]"
+            className="fixed right-0 top-2 w-12 h-14 block md:hidden z-[100] text-white"
             onClick={toggleMenu}>
             <FaBars id='bar-icon' className="w-6 h-8"></FaBars>
             <FaTimes id='times-icon' className="w-6 h-8 hidden"></FaTimes>
         </button>
 
-        <div className='fixed top-0 z-50 w-full bg-white shadow-md h-24'>
+        <div className='fixed top-0 z-50 w-full bg-black text-white shadow-md h-24'>
               <p className="font-semibold text-lg uppercase p-4 md:mt-4 md:ml-8" >
                 Ferramenta para avaliação de Repositórios Institucionais
               </p>
@@ -61,7 +63,7 @@ export default function RootLayout({
         <div id='menu' className="fixed hidden top-0 left-0 shadow-sm
             md:top-0 md:block md:w-full z-50">
               <div className="top-0 right-0 h-screen fixed w-[50%] md:w-full md:h-14 md:justify-end
-                z-50 flex flex-col md:flex-row bg-white md:bg-transparent px-5 pt-20 md:pt-8 md:mr-8 gap-2">
+                z-50 flex flex-col md:flex-row bg-black text-white md:bg-transparent px-5 pt-20 md:pt-8 md:mr-8 gap-2">
                 <Link href='/' className='px-2'>
                   <span className={pathname == "/" ? "border-b-2 border-solid border-black" : ""}>
                     QUESTIONÁRIO
@@ -74,7 +76,7 @@ export default function RootLayout({
                 </Link>
                 <Link href={ isResultEmpty ? '#' : '/result'} 
                   className={
-                    isResultEmpty ? 'px-2 text-gray-300' : 'px-2' 
+                    isResultEmpty ? 'hidden' : 'px-2' 
                   } >
                   <span 
                     className={
