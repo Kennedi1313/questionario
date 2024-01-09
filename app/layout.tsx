@@ -71,7 +71,12 @@ export default function RootLayout({
                 </Link>
                 <Link href='/sobre' className='px-2'>
                   <span className={pathname == "/sobre" ? "border-b-2 border-solid border-black" : ""}>
-                    CONTATO
+                    SOBRE
+                  </span>
+                </Link>
+                <Link href='/diretrizes' className='px-2'>
+                  <span className={pathname == "/sobre" ? "border-b-2 border-solid border-black" : ""}>
+                    DIRETRIZES
                   </span>
                 </Link>
                 <Link href={ isResultEmpty ? '#' : '/result'} 

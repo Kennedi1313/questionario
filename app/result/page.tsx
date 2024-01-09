@@ -3,7 +3,13 @@
 import { redirect } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import ReactToPrint from "react-to-print";
-
+import { getInputs } from "../lib";
+import { CustomRadioForResult } from "../components/inputs/CustomRadioGroupForResult";
+interface FormType {}
+const geral = getInputs<FormType>('geral')
+const contexto = getInputs<FormType>('contexto')
+const conteudo = getInputs<FormType>('conteudo')
+const usuarios = getInputs<FormType>('usuarios')
 export default function Result() {
     var pontGeral = 0;
     var pontContexto = 0;
@@ -41,31 +47,56 @@ export default function Result() {
                 O Repositório Institucional deve ser vinculado a Biblioteca Central da determinada universidade, tendo um setor (físico) administrativo específico. Deve-se também ter vínculo com o setor de tecnologia da informação, assim como com a reitoria, entre outros setores administrativos, ou seja, o setor pode ser alocado na Biblioteca Central da universidade e ter vínculo com a informática e a reitoria. O gestor do RI deve entender que o ambiente é de uso de uma comunidade usuária e, para isso, deve estabelecer uma organização e navegação facilitada com os princípios da AI.
                 O gestor do RI deve participar de eventos científicos, educação continuada e cursos em geral para se atualizar constantemente e poder opinar quanto a atualização do software e a customização do determinado RI.
                 </p>
-                <p className="font-bold">PONTUAÇÃO: {pontGeral.toFixed(2)}/62,4 ({((pontGeral/62.4)*100).toFixed(2)}%)</p>
+                <p className="font-bold">PONTUAÇÃO: {pontGeral.toFixed(2).replace('.', ',')}/62,4 ({((pontGeral/62.4)*100).toFixed(2).replace('.', ',')}%)</p>
+                <section className='flex flex-col gap-4'>
+                    {geral.inputs.map(({ validations, typeValue, value, name, label, options, ...props }) => {
+                        return <CustomRadioForResult
+                            name={name} value={value} label={label} options={options} {...props} key={label}/>
+                    })}
+                </section>
+
             </div>
             <div className="flex flex-col w-full rounded-md p-2 md:p-8 gap-2">
                 <h1 className="font-semibold">DIMENSÃO CONTEXTO</h1>
                 <p className="text-left">Sendo o Repositório Institucional um ambiente voltado a uma instituição educacional, deve contemplar a missão e os objetivos da instituição que está vinculado. Para isso, a Arquitetura da Informação fornece diretrizes importantes para a melhoria do seu Repositório.
                 </p>
-                <p className="font-bold">PONTUAÇÃO: {pontContexto.toFixed(2)}/4,16 ({((pontContexto/4.16)*100).toFixed(2)}%)</p>
+                <p className="font-bold">PONTUAÇÃO: {pontContexto.toFixed(2).replace('.', ',')}/4,16 ({((pontContexto/4.16)*100).toFixed(2).replace('.', ',')}%)</p>
+                    
+                {contexto.inputs.map(({ validations, typeValue, value, name, label, options, ...props }) => {
+                    return <CustomRadioForResult
+                        name={name} value={value} label={label} options={options} {...props} key={label}/>
+                    })}
+
             </div>
             <div className="flex flex-col w-full rounded-md p-2 md:p-8 gap-2">
                 <h1 className="font-semibold">DIMENSÃO CONTEÚDO</h1>
                 <p className="text-left">Sendo o Repositório Institucional um ambiente voltado a disponibilização da produção científica de uma instituição educacional, a disposição dos ícones que auxiliam na navegação, os ícones que indicam sinalizações para ajudar na tomada de decisão, o posicionamento da aba de busca, entre outros, você considera sua homepage deve ser fácil e interativa. Isso auxilia no acesso facilitado aos materiais científicos e na satisfatória experiência do usuário. Para isso, a Arquitetura da Informação fornece diretrizes importantes para a melhoria do seu Repositório.
                 </p>
-                <p className="font-bold">PONTUAÇÃO: {pontConteudo.toFixed(2)}/12,48 ({((pontConteudo/12.48)*100).toFixed(2)}%)</p>
+                <p className="font-bold">PONTUAÇÃO: {pontConteudo.toFixed(2).replace('.', ',')}/12,48 ({((pontConteudo/12.48)*100).toFixed(2).replace('.', ',')}%)</p>
+                
+                {conteudo.inputs.map(({ validations, typeValue, value, name, label, options, ...props }) => {
+                    return <CustomRadioForResult
+                        name={name} value={value} label={label} options={options} {...props} key={label}/>
+                    })}
+
             </div>
             <div className="flex flex-col w-full rounded-md p-2 md:p-8 gap-2">
                 <h1 className="font-semibold">DIMENSÃO USUÁRIOS</h1>
                 <p className="text-left">Sendo o Repositório Institucional um ambiente voltado a disponibilização de conteúdos científicos a comunidade usuária, deve-se realizar um estudo de comunidade para coletar opiniões e percepções dos usuários perante as funcionalidades, acesso, recuperação e uso da informação por, pelo menos, uma vez ao ano visto que sua instituição educacional recebe alunos novos semestralmente e, portanto, o RI deve contemplar as necessidades de informação de sua comunidade. A comunidade usuária deve ser autônoma para navegar, pesquisar, recuperar, encontrar e usar os materiais desejados. Para isso, a Arquitetura da Informação fornece diretrizes importantes para a melhoria do seu Repositório.
                 </p>
-                <p className="font-bold">PONTUAÇÃO: {pontUsuario.toFixed(2)}/20,96 ({((pontUsuario/20.96)*100).toFixed(2)}%)</p>
+                <p className="font-bold">PONTUAÇÃO: {pontUsuario.toFixed(2).replace('.', ',')}/20,96 ({((pontUsuario/20.96)*100).toFixed(2).replace('.', ',')}%)</p>
+            
+                {usuarios.inputs.map(({ validations, typeValue, value, name, label, options, ...props }) => {
+                    return <CustomRadioForResult
+                        name={name} value={value} label={label} options={options} {...props} key={label}/>
+                    })}
+                    
             </div>
             <div className="flex flex-col w-full rounded-md p-2 md:p-8 gap-2">
                 <h1 className="font-semibold">RESULTADO FINAL</h1>
                 <p className="font-bold">PONTUAÇÃO: {
-                    pontTotal.toFixed(2)}/100 
-                    ({pontTotal.toFixed(2)}%)
+                    pontTotal.toFixed(2).replace('.', ',')}/100 
+                    ({pontTotal.toFixed(2).replace('.', ',')}%)
                     <span className="text-3xl p-2">
                         {pontTotal < 40 ? '😞' : ''}
                         {pontTotal >= 40 && pontTotal < 60 ? '😐' : ''}
