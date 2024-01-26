@@ -1,5 +1,5 @@
 "use client"
-import { BsArrowUp, BsMenuUp, BsMoonStarsFill, BsSunFill } from 'react-icons/bs'
+import { BsArrowDown, BsArrowUp, BsMenuUp, BsMoonStarsFill, BsSunFill } from 'react-icons/bs'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { useCallback, useEffect, useState } from 'react'
@@ -107,8 +107,11 @@ export default function RootLayout({
         <footer id='footer' className='flex bottom-0 p-2 w-full h-10 z-50 bg-gray-200 dark:bg-black dark:text-white text-sm font-light text-center items-center justify-center'>
           Created by <a href="https://github.com/Kennedi1313" className='m-2 border-b-[1px] border-solid border-gray-800'>Kennedi1313</a> |  2023
         </footer>
-        <a href="#" className='fixed right-4 bottom-20 rounded-full w-12 h-12 bg-blue-700 text-white flex items-center justify-center font-extrabold text-2xl'>
+        <a href="#" className='fixed right-4 bottom-28 rounded-full w-12 h-12 bg-blue-700 text-white flex items-center justify-center font-extrabold text-2xl'>
             <BsArrowUp></BsArrowUp>
+        </a>
+        <a href="#footer" className='fixed right-4 bottom-14 rounded-full w-12 h-12 bg-blue-700 text-white flex items-center justify-center font-extrabold text-2xl'>
+            <BsArrowDown></BsArrowDown>
         </a>
       </body>
     </html>

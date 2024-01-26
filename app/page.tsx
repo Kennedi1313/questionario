@@ -23,38 +23,43 @@ export default function Home() {
   }
   const onSubmit = (data: any) => {
     var pontGeral = 0;
-    pontGeral += Number(data.q1);
-    pontGeral += Number(data.q2);
-    pontGeral += Number(data.q3);
-    pontGeral += Number(data.q4);
-    pontGeral += Number(data.q5);
-    pontGeral += Number(data.q6);
-    pontGeral += Number(data.q7);
-    pontGeral += Number(data.q8);
-    pontGeral += Number(data.q9);
-    pontGeral += Number(data.q10);
-    pontGeral += Number(data.q11);
-    pontGeral += Number(data.q12);
-    pontGeral += Number(data.q13);
-    pontGeral += Number(data.q14);
-    pontGeral += Number(data.q15);
-    pontGeral += Number(data.q16);
-    pontGeral += Number(data.q17);
+    console.log(geral);
+    console.log(geral.inputs);
+    console.log(geral.inputs[5]);
+    console.log(geral.inputs[5].options);
+    console.log(Number(data.q1));
+    pontGeral += Number(geral.inputs[0].options ? geral.inputs[0].options[Number(data.q1)].pont : 0);
+    pontGeral += Number(geral.inputs[1].options ? geral.inputs[1].options[Number(data.q2)].pont : 0);
+    pontGeral += Number(geral.inputs[2].options ? geral.inputs[2].options[Number(data.q3)].pont : 0);
+    pontGeral += Number(geral.inputs[3].options ? geral.inputs[3].options[Number(data.q4)].pont : 0);
+    pontGeral += Number(geral.inputs[4].options ? geral.inputs[4].options[Number(data.q5)].pont : 0);
+    pontGeral += Number(geral.inputs[5].options ? geral.inputs[5].options[Number(data.q6)].pont : 0);
+    pontGeral += Number(geral.inputs[6].options ? geral.inputs[6].options[Number(data.q7)].pont : 0);
+    pontGeral += Number(geral.inputs[7].options ? geral.inputs[7].options[Number(data.q8)].pont : 0);
+    pontGeral += Number(geral.inputs[8].options ? geral.inputs[8].options[Number(data.q9)].pont : 0);
+    pontGeral += Number(geral.inputs[9].options ? geral.inputs[9].options[Number(data.q10)].pont : 0);
+    pontGeral += Number(geral.inputs[10].options ? geral.inputs[10].options[Number(data.q11)].pont : 0);
+    pontGeral += Number(geral.inputs[11].options ? geral.inputs[11].options[Number(data.q12)].pont : 0);
+    pontGeral += Number(geral.inputs[12].options ? geral.inputs[12].options[Number(data.q13)].pont : 0);
+    pontGeral += Number(geral.inputs[13].options ? geral.inputs[13].options[Number(data.q14)].pont : 0);
+    pontGeral += Number(geral.inputs[14].options ? geral.inputs[14].options[Number(data.q15)].pont : 0);
+    pontGeral += Number(geral.inputs[15].options ? geral.inputs[15].options[Number(data.q16)].pont : 0);
+    pontGeral += Number(geral.inputs[16].options ? geral.inputs[16].options[Number(data.q17)].pont : 0);
 
     var pontContexto = 0;
-    pontContexto += Number(data.q18);
+    pontContexto += Number(contexto.inputs[0].options ? contexto.inputs[0].options[Number(data.q18)].pont : 0);
 
     var pontConteudo = 0;
-    pontConteudo += Number(data.q19);
-    pontConteudo += Number(data.q20);
-    pontConteudo += Number(data.q21);
+    pontConteudo += Number(conteudo.inputs[0].options ? conteudo.inputs[0].options[Number(data.q19)].pont : 0);
+    pontConteudo += Number(conteudo.inputs[1].options ? conteudo.inputs[1].options[Number(data.q20)].pont : 0);
+    pontConteudo += Number(conteudo.inputs[2].options ? conteudo.inputs[2].options[Number(data.q21)].pont : 0);
 
     var pontUsuario = 0;
-    pontUsuario += Number(data.q22);
-    pontUsuario += Number(data.q23);
-    pontUsuario += Number(data.q24);
-    pontUsuario += Number(data.q25);
-    pontUsuario += Number(data.q26);
+    pontUsuario += Number(usuarios.inputs[0].options ? usuarios.inputs[0].options[Number(data.q22)].pont : 0);
+    pontUsuario += Number(usuarios.inputs[1].options ? usuarios.inputs[1].options[Number(data.q23)].pont : 0);
+    pontUsuario += Number(usuarios.inputs[2].options ? usuarios.inputs[2].options[Number(data.q24)].pont : 0);
+    pontUsuario += Number(usuarios.inputs[3].options ? usuarios.inputs[3].options[Number(data.q25)].pont : 0);
+    pontUsuario += Number(usuarios.inputs[4].options ? usuarios.inputs[4].options[Number(data.q26)].pont : 0);
 
     localStorage.setItem('pontGeral', String(pontGeral));
     localStorage.setItem('pontContexto', String(pontContexto));
@@ -110,7 +115,7 @@ export default function Home() {
         <div className='flex flex-col mb-10 md:mb-28 bg-white pt-20 md:px-5 p-4'>
           <div className='flex flex-col md:flex-row w-full rounded-md p-2 md:p-8'>
             <p className='font-semibold text-2xl leading-[1.875rem]'>
-              Seja bem-vindo a “Ferramenta de Avaliação de Repositórios Institucionais”, baseada nos princípios da Arquitetura da Informação (AI).
+              Seja bem-vindo à “Ferramenta para Avaliação de Repositórios Institucionais”, baseada nos princípios da Arquitetura da Informação (AI).
             </p>
           </div>
           <div className='w-full p-2 md:px-8 md:py-5 gap-2 '>

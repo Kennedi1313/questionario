@@ -47,7 +47,7 @@ export const forms: { [K in FormSection]: InputProps[] } =
                     value: "0", 
                     pont: "0",
                     desc: "DSpace", 
-                    text: "DSpace é o software livre de gerenciamento de Repositórios Institucionais mais utilizado no Brasil e no mundo, segundo as estatísticas do Diretório OpenDOAR! Como DSpace é possível uma customização satisfatória e adequada para a sua comunidade usuária."
+                    text: "DSpace é o software livre de gerenciamento de Repositórios Institucionais mais utilizado no Brasil e no mundo, segundo as estatísticas do Diretório OpenDOAR! Com o DSpace é possível uma customização satisfatória e adequada para a sua comunidade usuária."
                 },
                 { 
                     value: "1", 
