@@ -685,7 +685,7 @@ export const forms: { [K in FormSection]: InputProps[] } =
         {
             type: "radio",
             name: "q24",
-            label: "24. No geral, escreva como você considera que a comunidade usuária avalia a Arquitetura da Informação do Repositório da sua Instituição?",
+            label: "24. No geral, como você considera que a comunidade usuária avalia a Arquitetura da Informação do Repositório da sua Instituição?",
             value: "",
             options: [
                 { 
